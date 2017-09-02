@@ -7,9 +7,8 @@
 // } from 'react-addons-test-utils';
 import { expect } from 'chai';
 
-describe('Boilerplate', function () {
-  it('should do boilerplate things', function () {
-    // TODO: test something now
+describe('React Camera', function () {
+  it('should render', function () {
     expect(true).to.equal(true);
   });
 });

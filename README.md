@@ -4,7 +4,11 @@ The comprehensive camera module for React. Including photographs! (videos, and b
 
 ## Getting started
 
-`npm --save react-camera`
+`npm install react-camera`
+
+or
+
+`yarn add react-camera`
 
 ## Usage
 
@@ -12,7 +16,7 @@ The comprehensive camera module for React. Including photographs! (videos, and b
 import React, { Component } from 'react';
 import Camera from 'react-camera';
 
-class App extends Component {
+export default class App extends Component {
 
   constructor(props) {
     super(props);
@@ -20,11 +24,10 @@ class App extends Component {
   }
 
   takePicture() {
-    const { img } = this.refs;
-    this.refs.camera.capture()
+    this.camera.capture()
     .then(blob => {
-      img.src = URL.createObjectURL(blob);
-      img.onload = () => { URL.revokeObjectURL(this.src); }
+      this.img.src = URL.createObjectURL(blob);
+      this.img.onload = () => { URL.revokeObjectURL(this.src); }
     })
   }
 
@@ -33,36 +36,49 @@ class App extends Component {
       <div style={style.container}>
         <Camera
           style={style.preview}
-          ref="camera"
+          ref={(cam) => {
+            this.camera = cam;
+          }}
         >
-          <div style={style.capture} onClick={this.takePicture}>[TAKE A PICTURE]</div>
+          <div style={style.captureContainer} onClick={this.takePicture}>
+            <div style={style.captureButton} />
+          </div>
         </Camera>
-        <img ref="img" />
+        <img
+          style={style.captureImage}
+          ref={(img) => {
+            this.img = img;
+          }}
+        />
       </div>
     );
   }
 }
 
-export default App;
-
 const style = {
   preview: {
-    flex: 1,
+    position: 'relative',
   },
-  container: {
-    flex: 1,
-    flexDirection: 'row',
+  captureContainer: {
+    display: 'flex',
+    position: 'absolute',
+    justifyContent: 'center',
+    zIndex: 1,
+    bottom: 0,
+    width: '100%'
   },
-  capture: {
-    flex: 0,
+  captureButton: {
     backgroundColor: '#fff',
-    borderRadius: 5,
+    borderRadius: '50%',
+    height: 56,
+    width: 56,
     color: '#000',
-    padding: 10,
-    margin: 40
+    margin: 20
   },
+  captureImage: {
+    width: '100%',
+  }
 };
-
 ```
 
 ## Component instance methods
