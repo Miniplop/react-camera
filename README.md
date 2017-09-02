@@ -1,4 +1,4 @@
-# React Camera [NOT PUBLISHED YET] [![Travis status build](https://travis-ci.org/Miniplop/react-camera.svg?branch=master)](https://travis-ci.org/Miniplop/react-camera/)
+# React Camera [![Travis status build](https://travis-ci.org/Miniplop/react-camera.svg?branch=master)](https://travis-ci.org/Miniplop/react-camera/)
 
 The comprehensive camera module for React. Including photographs! (videos, and barcode scanning coming soon)
 
