@@ -1,4 +1,4 @@
-# React Camera [![Travis status build](https://travis-ci.org/Miniplop/react-camera.svg?branch=master)](https://travis-ci.org/Miniplop/react-camera/)
+# React Camera [![Travis status build](https://travis-ci.org/Miniplop/react-camera.svg?branch=master)](https://travis-ci.org/Miniplop/react-camera/) [![npm version](https://badge.fury.io/js/react-camera.svg)](https://badge.fury.io/js/react-camera)
 
 The comprehensive camera module for React. Including photographs! (videos, and barcode scanning coming soon)
 
@@ -70,9 +70,3 @@ const style = {
 You can access component methods by adding a ref (ie. ref="camera") prop to your <Camera> element, then you can use this.refs.camera.capture(cb), etc. inside your component.
 
 #### `capture(): Promise`
-
-## Development
-
-### yarn
-
-### npm (slower)
