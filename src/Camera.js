@@ -53,5 +53,8 @@ Camera.defaultProps = {
 export default Camera;
 
 const styles = {
-  base: {}
+  base: {
+    width: '100%',
+    height: '100%'
+  }
 };

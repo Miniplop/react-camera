@@ -89,7 +89,7 @@
   "keywords": [
     "react",
     "reactjs",
-    "boilerplate"
+    "camera"
   ],
   "pre-push": [
     "test"
