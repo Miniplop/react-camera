@@ -16,6 +16,16 @@ class Camera extends Component {
     }
   }
 
+  stop() {
+    try {
+      // You are on windows
+      this.video.srcObject.getVideoTracks().stop();
+    } catch (e) {
+      // You are on mac
+      this.video.srcObject.getVideoTracks()[0].stop();
+    }
+  }
+
   capture() {
     const mediaStreamTrack = this.state.mediaStream.getVideoTracks()[0];
     const imageCapture = new window.ImageCapture(mediaStreamTrack);
