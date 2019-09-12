@@ -1,6 +1,7 @@
 # React Camera [![Travis status build](https://travis-ci.org/Miniplop/react-camera.svg?branch=master)](https://travis-ci.org/Miniplop/react-camera/) [![npm version](https://badge.fury.io/js/react-camera.svg)](https://badge.fury.io/js/react-camera)
 
-The comprehensive camera module for React. Including photographs! (videos, and barcode scanning coming soon)
+The comprehensive camera module for React. Including photographs! (videos, and barcode scanning coming soon).
+As of September 2019, this library is only supported on Chrome. To use it on other browsers, you need to use this [polyfill](https://github.com/GoogleChromeLabs/imagecapture-polyfill).
 
 ## Getting started
 
